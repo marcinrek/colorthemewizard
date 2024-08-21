@@ -1,0 +1,8 @@
+head.hbs
+*.md
+webpack.header.js
+node_modules/
+package.json
+*.lock
+*-lock.json
+*.notpretty.*

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "checkJs": false,
+    "baseUrl": "./",
+    "paths": {
+      "rootDir/*": ["/*"],
+      "src/*": ["src/*"],
+      "common/*": ["src/common/*"],
+      "components/*": ["src/components/*"],
+      "pages/*": ["src/pages/*"],
+      "assets/*": ["src/assets/*"],
+      "partials/*": ["src/components/partials/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "node_modules/", "build", "dist"]
+}

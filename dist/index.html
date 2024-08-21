@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <title>Color Theme Wizard</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            body {
+                background-color: #eee;
+            }
+            :root,
+            ::after,
+            ::before {
+                --primary: #aaa;
+                --secondary: #888;
+                --tertiary: #555;
+            }
+            .test,
+            .test ::before,
+            .test ::after {
+                --primary: #333;
+                --secondary: #222;
+                --tertiary: #111;
+            }
+        </style>
+    <link href="assets/css/render.css" rel="stylesheet">
+</head>
+
+    <body class="p-4">
+        <main class="container mx-auto px-4 pb-4 prose">
+            <div style="width: 1rem; height: 1rem; background-color: var(--primary)"></div>
+            <div style="width: 1rem; height: 1rem; background-color: var(--secondary)"></div>
+            <div style="width: 1rem; height: 1rem; background-color: var(--tertiary)"></div>
+            <div class="test">
+                <div class="test" style="width: 1rem; height: 1rem; background-color: var(--primary)"></div>
+                <div class="test" style="width: 1rem; height: 1rem; background-color: var(--secondary)"></div>
+                <div class="test" style="width: 1rem; height: 1rem; background-color: var(--tertiary)"></div>
+            </div>
+
+            
+            <div id="ctw"></div>
+            
+
+        </main>
+
+        <script src="assets/js/render.js"></script>
+        <script>
+                window.renderCTW({
+                    appWrapperId: 'ctw',
+                    selectors: [
+                        ':root, ::after, ::before',
+                        '.test, .test ::before, .test ::after'
+                    ],
+                    selectorFilters: {
+                        remove: /^--(tw).+/g,
+                        keep:  /^.+/g
+                    },
+                    hightlight: [
+                        '--primary'
+                    ]
+                })
+            </script> 
+    </body>
+</html>

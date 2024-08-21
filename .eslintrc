@@ -1,0 +1,36 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "node": true,
+        "es6": true,
+        "jest/globals": true
+    },
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "plugins": ["jest"],
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn"
+    },
+    "extends": ["eslint:recommended", "eslint-config-prettier", "plugin:react/recommended", "plugin:jest/style"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "jest": {
+            "version": 29
+        }
+    }
+}
